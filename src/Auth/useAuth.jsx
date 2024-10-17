@@ -57,7 +57,7 @@ export const useAuth = () => {
             // alert("Logged in Successfully")
         } catch (e) {
             console.error('Error logging in:', e.message);
-            throw new Error("Login failed");
+            throw new Error("Login failed", e);
         }
     }
 
