@@ -1,14 +1,14 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Home } from "./Pages/Home"
-// import { About } from "./pages/About";
+import { Home } from "./Pages/Home";
+import { About } from "./Pages/About";
 import { SignIn } from "./Pages/SignIn";
 import { SignUp } from "./Pages/SignUp";
 import { Navbar } from "./components/Navbar";
-// import { Qr } from "./pages/Qr";
-// import { VehicleDetails } from "./pages/VehicleDetails";
-// import { Details } from "./pages/Details";
-// import Redirect from "./pages/Redirect";
-// import ContactOwner from "./pages/ContactOwner";
+import { Qr } from "./Pages/Qr";
+import { VehicleDetails } from "./Pages/VehicleDetails";
+import { Details } from "./Pages/Details";
+import Redirect from "./Pages/Redirect";
+import ContactOwner from "./Pages/ContactOwner";
  
 
 const App = () => {
@@ -22,14 +22,14 @@ const App = () => {
       <Routes>
 
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
-        {/* <Route path="/about" element={<About />} />
         <Route path="/qr" element={<Qr />} />
         <Route path="/qr/details" element={<Details />} />
         <Route path="/qr/:link" element={<Redirect />} />
         <Route path='/vehicledetails' element={<VehicleDetails />}></Route>
-        <Route path="/contactOwner" element={<ContactOwner />} /> */}
+        <Route path="/contactOwner" element={<ContactOwner />} />
       
 
       </Routes>
