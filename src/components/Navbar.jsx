@@ -3,10 +3,10 @@ import {  useState } from "react";
 import { FaTimes } from "react-icons/fa";
 import { CiMenuFries } from "react-icons/ci";
  
-// import { useAuth } from "../Auth/useAuth";
+import { useAuth } from "../Auth/useAuth";
 
 export const Navbar = () => {
-    // const {isLoggedIn, user, logout} = useAuth();
+    const {isLoggedIn, user, logout} = useAuth();
 
     const [click, setClick] = useState(false);
 
@@ -53,21 +53,19 @@ export const Navbar = () => {
                             <li className="hover:text-fuchsia-600 transition border-b-2 border-slate-900 hover:border-fuchsia-600 cursor-pointer">
                                 <NavLink to="/vehicledetails"  >VehicleDetails </NavLink>
                             </li>
-                            {/* {isLoggedIn ? ( */}
+                            {isLoggedIn ? (
                                 <>
                                     <li className="hover:text-fuchsia-600 transition border-b-2 border-slate-900 hover:border-fuchsia-600 cursor-pointer">
 
-                                        <button className="logout-button"  >  Logout </button>
+                                        <button className="logout-button" onClick={logout}>  Logout </button>
                                     </li>
 
-                                    <p className="bg-white text-gray-600">Hello                               
-                                    </p>
+                                    <p className="bg-white text-gray-600">Hello {user?.name}</p>
                                 </>
-                            {/* ):( */}
+                            ):(
                                 <li className="hover:text-fuchsia-600 transition border-b-2 border-slate-900 hover:border-fuchsia-600 cursor-pointer">
                                     <NavLink to="/signin"  > Login </NavLink>
-                                </li>
-                                {/* )} */}
+                                </li>)}
 
 
 
