@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Home } from "./pages/Home"
+import { Home } from "./Pages/Home"
 // import { About } from "./pages/About";
-import { SignIn } from "./pages/SignIn";
-import { SignUp } from "./pages/SignUp";
+import { SignIn } from "./Pages/SignIn";
+import { SignUp } from "./Pages/SignUp";
 import { Navbar } from "./components/Navbar";
 // import { Qr } from "./pages/Qr";
 // import { VehicleDetails } from "./pages/VehicleDetails";
