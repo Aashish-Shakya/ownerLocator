@@ -1,35 +1,42 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Home } from "./Pages/Home"
+// import { About } from "./pages/About";
+// import { SignIn } from "./pages/SignIn";
+// import { SignUp } from "./pages/SignUp";
+import { Navbar } from "./components/Navbar";
+// import { Qr } from "./pages/Qr";
+// import { VehicleDetails } from "./pages/VehicleDetails";
+// import { Details } from "./pages/Details";
+// import Redirect from "./pages/Redirect";
+// import ContactOwner from "./pages/ContactOwner";
+ 
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+   
+  return(
+  <>
+    <BrowserRouter >
+    
+    <Navbar/>
+        
+      <Routes>
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+        <Route path="/" element={<Home />} />
+        {/* <Route path="/about" element={<About />} />
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/qr" element={<Qr />} />
+        <Route path="/qr/details" element={<Details />} />
+        <Route path="/qr/:link" element={<Redirect />} />
+        <Route path='/vehicledetails' element={<VehicleDetails />}></Route>
+        <Route path="/contactOwner" element={<ContactOwner />} /> */}
+      
+
+      </Routes>
+    
+    </BrowserRouter>
+  </>
   )
-}
+};
 
-export default App
+export default App;
